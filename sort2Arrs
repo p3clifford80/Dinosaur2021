@@ -1,0 +1,17 @@
+public static int[] sort(int[] first, int[] second)
+    {   int[] result = new int[first.length+second.length];
+        int firstInd = 0, secInd = 0, resIndex = 0;
+        while( firstInd < first.length && secInd < second.length)
+        {
+            if( first[firstInd] < second[secInd])
+            {   result[resIndex] = first[firstInd];
+                firstInd++;
+            }
+            else
+            {   result[resIndex] = second[secInd];
+                secInd++;
+            }
+            resIndex++;
+        }
+        return result;       
+    }
